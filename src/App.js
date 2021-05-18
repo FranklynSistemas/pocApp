@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import { GlobalProvider } from './context/GlobalState';
+
+import { Home } from './components/Home';
+import { PokemonDetail } from './components/PokemonDetail'
+import { Favorites } from './components/Favorites'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <TransitionGroup  className="App">
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/detail/:pokemonName" exact>
+            {({ match }) => (
+                <CSSTransition
+                  in={match != null}
+                  timeout={500}
+                  classNames="page"
+                  unmountOnExit
+                >
+                  <div className="page">
+                    <PokemonDetail {...match} />
+                  </div>
+                </CSSTransition>
+              )}
+          </Route>
+          <Route path="/favorites" component={Favorites} exact />
+        </Switch>
+      </TransitionGroup>
+    </GlobalProvider>
   );
 }
 
