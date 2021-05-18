@@ -14,6 +14,7 @@ export const PokemonDetail = (match) => {
     if (pokemonName) {
       getPokemonInfo(pokemonName);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pokemonName]);
 
   if (!pokemonName || !pokemonInfo) {
