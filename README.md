@@ -4,10 +4,14 @@ This project is a web application connected with [Poke Api](https://pokeapi.co/)
 
 1. Login without api verification saving the user session on local storage
 2. Show the list of pokemon with a limit of 20 and with pagination
-3. Allow search a pokemon by name into the current page, this search is locally from the current pokemon list from [Poke Api](https://pokeapi.co/)
+3. Allow search a pokemon by name into the current page, this search is locally from the current pokemon list from [Poke Api](https://pokeapi.co/) due to this API doesn't allow search
 4. Allow see the pokemon's details click on the pokemon name
 5. Allow add to favorite
 6. List the favorite
+
+## Example
+![pocApp](https://user-images.githubusercontent.com/11137311/118580083-dc887b80-b754-11eb-822c-656695a1fdc1.gif)
+
 
 ## Available Scripts
 
