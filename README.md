@@ -9,6 +9,9 @@ This project is a web application connected with [Poke Api](https://pokeapi.co/)
 5. Allow add to favorite
 6. List the favorite
 
+## Test it
+[https://poc-app-chi.vercel.app/](https://poc-app-chi.vercel.app/)
+
 ## Example
 ![pocApp](https://user-images.githubusercontent.com/11137311/118580083-dc887b80-b754-11eb-822c-656695a1fdc1.gif)
 
